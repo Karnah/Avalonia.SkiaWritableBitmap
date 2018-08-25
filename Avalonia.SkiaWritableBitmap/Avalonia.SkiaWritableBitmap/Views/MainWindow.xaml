@@ -1,0 +1,21 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Avalonia.SkiaWritableBitmap.ViewModels;assembly=Avalonia.SkiaWritableBitmap"
+        Icon="resm:Avalonia.SkiaWritableBitmap.Assets.avalonia-logo.ico"
+        Title="Avalonia.SkiaWritableBitmap"
+        Width="800" Height="600">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+    <Grid>
+        <Image Source="{Binding Background}" />
+
+        <Image Margin="-300,0,0,0" Width="800" Height="600" Source="{Binding UnitWriteableBitmap}" />
+        <Image Margin="-300,0,0,0" Width="800" Height="600" Source="{Binding AuraWriteableBitmap}" />
+
+        <Image Margin="200,0,0,0" Width="800" Height="600" Source="{Binding UnitResavedBitmap}" />
+        <Image Margin="200,0,0,0" Width="800" Height="600" Source="{Binding AuraResavedBitmap}" />
+    </Grid>
+</Window>
